@@ -1,0 +1,39 @@
+if [ -f /usr/bin/hyprctl ]; then
+  # Github
+  sudo pacman -S --noconfirm github-cli
+
+  # Dev
+  sudo pacman -S --noconfirm neovim luarocks alacritty
+  sudo pacman -S --noconfirm rustup xmake python
+  rustup install stable
+
+  # Hypr
+  sudo pacman -S --noconfirm hyprland gtklock ly wev
+
+  # Core
+  sudo pacman -S --noconfirm lxsession pavucontrol
+
+  # Rice
+  sudo pacman -S --noconfirm nwg-panel rofi swww grim
+
+  if [ ! -f ~/Desktop/ ]; then
+    mkdir ~/Desktop/
+    mkdir ~/Downloads/
+    mkdir ~/Documents/
+    mkdir ~/Music/
+    mkdir ~/Pictures/
+    mkdir ~/Videos/
+  fi
+
+  # Extra
+  sudo pacman -S --noconfirm fish eza dysk fastfetch fd ripgrep fzf ranger
+
+  # Wallpapers
+  # cp -r ./wall/ ~/Desktop/
+  git clone https://github.com/PEzwarts/wall ~/Desktop/wall/
+
+  # Applications
+  sudo pacman -S --noconfirm libreoffice-fresh
+
+  ./update.sh
+fi

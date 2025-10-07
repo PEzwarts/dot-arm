@@ -1,0 +1,55 @@
+[
+  {
+    "bindings": {
+      "Alt-Left": "workspace::ActivatePaneLeft",
+      "Alt-Right": "workspace::ActivatePaneRight",
+      "Alt-x": "workspace::ToggleBottomDock",
+      "Alt-c": "workspace::Save",
+      "Alt-z": "pane::ActivateNextItem",
+      "Alt-d": "pane::CloseActiveItem",
+      "Alt-q": "zed::Quit",
+
+      "Alt-Up": "editor::MoveLineUp",
+      "Alt-Down": "editor::MoveLineDown",
+
+      "Shift-Up": "editor::MovePageUp",
+      "Shift-Down": "editor::MovePageDown",
+
+      "Shift-Left": "editor::MoveToPreviousWordStart",
+      "Shift-Right": "editor::MoveToNextWordEnd"
+    }
+  },
+
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "f": "project_panel::NewFile",
+      "d": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "D": "project_panel::Delete",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste"
+    }
+  },
+
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "Alt-a": ["vim::SwitchMode", "Insert"]
+    }
+  },
+
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "Alt-a": ["vim::SwitchMode", "Normal"]
+    }
+  },
+
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "Alt-a": ["vim::SwitchMode", "Normal"]
+    }
+  }
+]
