@@ -2,6 +2,8 @@
 
 # Personal dotfiles. Asahi edition.
 
+Testing needed.
+
 * Hyprland
 * Neovim
 * Alacritty
