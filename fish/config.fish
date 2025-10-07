@@ -1,7 +1,7 @@
 set t0 neovide
 set t1 alacritty
 
-set t 0
+set t 1
 
 source ~/.config/fish/cmds/cpp/meson.fish
 # source ~/.config/fish/cmds/cpp/xmake.fish

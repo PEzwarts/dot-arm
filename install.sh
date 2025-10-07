@@ -14,7 +14,7 @@ if [ -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm lxsession pavucontrol
 
   # Rice
-  sudo pacman -S --noconfirm nwg-panel rofi swww grim
+  sudo pacman -S --noconfirm nwg-panel rofi swaybg grim
 
   if [ ! -f ~/Desktop/ ]; then
     mkdir ~/Desktop/
@@ -33,7 +33,7 @@ if [ -f /usr/bin/hyprctl ]; then
   git clone https://github.com/PEzwarts/wall ~/Desktop/wall/
 
   # Applications
-  sudo pacman -S --noconfirm libreoffice-fresh
+  sudo pacman -S --noconfirm firefox libreoffice-fresh
 
   ./update.sh
 fi
