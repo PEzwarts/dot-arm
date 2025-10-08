@@ -1,3 +1,16 @@
+if [ $(cat /etc/os-release | grep "ARM") ]; then
+  read user
+  read pass
+
+  useradd -m -G users -s /bin/bash $user
+  (echo "$pass"; echo "$pass") | passwd $user
+
+  sed -i "s/# Defaults targetpw/Defaults targetpw/g"
+  sed -i "s/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g"
+
+  reboot
+fi
+
 if [ -f /usr/bin/hyprctl ]; then
   # Github
   sudo pacman -S --noconfirm github-cli
