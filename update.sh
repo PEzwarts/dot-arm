@@ -10,7 +10,7 @@ cp -r ./dot/fish/ ~/.config/
 cp -r ./dot/alacritty/ ~/.config/
 
 # Hyprland
-cp -r ./dot/hypr/ ~/.config/
+cp -r ./hypr/ ~/.config/
 
 cp -r ./dot/gtk-3.0/ ~/.config/
 cp -r ./dot/gtk-4.0/ ~/.config/
