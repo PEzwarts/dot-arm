@@ -1,4 +1,4 @@
-if [ $(cat /etc/os-release | grep "ARM") ]; then
+if [ $("cat /etc/os-release" | grep "ARM") ]; then
   read user
   read pass
 
