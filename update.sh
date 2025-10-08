@@ -1,22 +1,20 @@
-# Neovim
-cp -r ./nvim/ ~/.config/
+git clone https://github.com/PEzwarts/dot
 
-# Zed
-# cp -r ./zed/ ~/.config/
+# Neovim
+cp -r ./dot/nvim/ ~/.config/
 
 # Fish
-cp -r ./fish/ ~/.config/
-
-# Kitty
-# cp -r ./kitty/ ~/.config/
+cp -r ./dot/fish/ ~/.config/
 
 # Alacritty
-cp -r ./alacritty/ ~/.config/
+cp -r ./dot/alacritty/ ~/.config/
 
 # Hyprland
-cp -r ./hypr/ ~/.config/
+cp -r ./dot/hypr/ ~/.config/
 
-cp -r ./gtk-3.0/ ~/.config/
-cp -r ./gtk-4.0/ ~/.config/
+cp -r ./dot/gtk-3.0/ ~/.config/
+cp -r ./dot/gtk-4.0/ ~/.config/
 
 hyprctl reload
+
+sed -i "s/set t 0/set t 1/g" ~/.config/fish/config.fish
