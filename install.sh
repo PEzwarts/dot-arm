@@ -1,14 +1,16 @@
 if [[ $(cat /etc/os-release | grep "ARM") ]]; then
-  read user
-  read pass
+  if [[ $(whoami | grep "root") ]]; then
+    read user
+    read pass
 
-  useradd -m -G users -s /bin/bash $user
-  (echo "$pass"; echo "$pass") | passwd $user
+    useradd -m -G users -s /bin/bash $user
+    (echo "$pass"; echo "$pass") | passwd $user
 
-  sed -i "s/# Defaults targetpw/Defaults targetpw/g"
-  sed -i "s/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g"
+    sed -i "s/# Defaults targetpw/Defaults targetpw/g"
+    sed -i "s/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g"
 
-  reboot
+    reboot
+  fi
 fi
 
 if [[ -f /usr/bin/hyprctl ]]; then
