@@ -11,7 +11,7 @@ if [[ $(cat /etc/os-release | grep "ARM") ]]; then
   reboot
 fi
 
-if [ -f /usr/bin/hyprctl ]; then
+if [[ -f /usr/bin/hyprctl ]]; then
   # Github
   sudo pacman -S --noconfirm github-cli
 
