@@ -3,6 +3,9 @@ git clone https://github.com/PEzwarts/dot
 # Neovim
 cp -r ./dot/nvim/ ~/.config/
 
+# Zed
+cp -r ./dot/zed ~/.config/
+
 # Fish
 cp -r ./dot/fish/ ~/.config/
 
