@@ -6,8 +6,10 @@ if [[ $(cat /etc/os-release | grep "ARM") ]]; then
     useradd -m -G users -s /bin/bash $user
     (echo "$pass"; echo "$pass") | passwd $user
 
-    sed -i "s/# Defaults targetpw/Defaults targetpw/g"
-    sed -i "s/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g"
+    echo "
+
+Defaults targetpw
+ALL ALL=(ALL:ALL) ALL" > /etc/sudoers
 
     reboot
   fi
