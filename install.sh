@@ -51,5 +51,7 @@ if [[ -f /usr/bin/hyprctl ]]; then
   # Applications
   sudo pacman -S --noconfirm firefox libreoffice-fresh
 
+  nvim --headless -c ":Lazy"
+
   ./update.sh
 fi

@@ -18,5 +18,3 @@ cp -r ./dot/gtk-4.0/ ~/.config/
 hyprctl reload
 
 sed -i "s/set t 0/set t 1/g" ~/.config/fish/config.fish
-
-nvim --headless -c ":Lazy"
