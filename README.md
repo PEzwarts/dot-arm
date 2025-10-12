@@ -2,7 +2,7 @@
 
 # Personal dotfiles. Asahi edition.
 
-Testing needed.
+This dot fork might be deprecated...
 
 * Hyprland
 * Alacritty
